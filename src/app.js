@@ -12,6 +12,8 @@ import 'normalize.css/normalize.css';
 import 'react-dates/lib/css/_datepicker.css';
 import './styles/styles.scss';
 
+import './firebase/firebase';
+
 //stateless functional component
 //do not have access to this
 //can use props, but not state
