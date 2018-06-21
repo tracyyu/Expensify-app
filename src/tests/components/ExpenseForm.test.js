@@ -37,13 +37,13 @@ test('should set description on input change', () => {
     expect(wrapper.state('description')).toBe(value);
 });
 
-test('should set note on textarea change', () => {
-    const value = 'new note';
+test('should set text on textarea change', () => {
+    const value = 'new text';
     const wrapper = shallow(<ExpenseForm />);
     wrapper.find('textarea').at(0).simulate('change', {
         target: { value }
     });
-    expect(wrapper.state('note')).toBe(value);
+    expect(wrapper.state('text')).toBe(value);
 });
 
 test('should set amount on valid input change', () => {
@@ -74,7 +74,7 @@ test('should call onSubmit prop for valid form submission', () => {
     expect(onSubmitSpy).toHaveBeenLastCalledWith({
         description: expenses[0].description,
         amount: expenses[0].amount,
-        note: expenses[0].note,
+        text: expenses[0].text,
         createdAt: expenses[0].createdAt
     });
 });

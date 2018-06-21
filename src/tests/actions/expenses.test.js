@@ -52,11 +52,11 @@ test('should remove expenses from firebase', (done) => {
 
 
 test('should setup edit expense action object', () => {
-    const action = editExpense('123', { note: 'new note value' });
+    const action = editExpense('123', { text: 'new note value' });
     expect(action).toEqual({ 
         type: 'EDIT_EXPENSE',
         id: '123',
-        updates: { note: 'new note value' }
+        updates: { text: 'new note value' }
      });
 });
 
@@ -92,7 +92,7 @@ test('should add expense to database and store', (done) => {
     const expenseData = {
         description: 'Mouse',
         amount: 3000,
-        note: 'This one is better',
+        text: 'This one is better',
         createdAt: 1000
     };  
     store.dispatch(startAddExpense(expenseData)).then(() => {
@@ -117,7 +117,7 @@ test('should add expense with defaults to database and store', (done) => {
     const expenseDefaults = {
         description: '',
         amount: 0,
-        note: '',
+        text: '',
         createdAt: 0
     };  
     store.dispatch(startAddExpense({})).then(() => {
