@@ -27,9 +27,9 @@ export class EditExpensePage extends React.Component {
                         expense={this.props.expense}
                         onSubmit={ this.onSubmit }                    
                     />
-                    <button className="button button--secondary" id="remove-button" onClick={this.onRemove}>Remove Expense</button>
-                    <button onClick={() => {
-                        //    props.history.push('/');
+                    <button className="button button--remove" id="remove-button" onClick={this.onRemove}>Remove Expense</button>
+                    <button className="button button--secondary" onClick={() => {
+                            this.props.history.push('/');
                         }} >Go Back</button>
                 </div>
             </div>

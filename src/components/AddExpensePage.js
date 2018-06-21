@@ -21,10 +21,10 @@ export class AddExpensePage extends React.Component {
                     <ExpenseForm 
                         onSubmit = {this.onSubmit}
                     />
+                    <button className="button button--secondary" onClick={() => {
+                        this.props.history.push('/');
+                    }} >Go Back</button>
                 </div>
-                <button onClick={() => {
-                //    props.history.push('/');
-                }} >Go Back</button>
             </div>
         );
     }
